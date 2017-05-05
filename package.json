@@ -1,17 +1,18 @@
 {
-  "name": "vue-cordova-demo",
+  "name": "CFFramework",
   "version": "1.0.0",
-  "description": "Demo for vue-cordova NPM package",
-  "author": "Simon Tarchichi <kartsims@gmail.com>",
+  "description": "Framwork for SC Consumer Finance",
+  "author": "John Zhuang <zhuangyinping@gmail.com>",
   "private": true,
   "scripts": {
+    "android": "cordova prepare android && cordova run android",
     "browser": "cordova prepare browser && cross-env PORT=3000 node build/dev-server.js",
     "check": "cordova requirements",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
-    "ios": "cordova prepare ios && cordova run ios",
+    "ios": "cordova prepare ios && cordova run ios --target iPhone-7",
     "lint": "eslint --ext .js,.vue src",
-    "postinstall": "npm run build && cordova prepare"
+    "prepare": "npm run build && cordova prepare"
   },
   "dependencies": {
     "cordova": "^6.5.0",
